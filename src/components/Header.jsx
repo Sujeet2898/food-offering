@@ -3,8 +3,10 @@ import styled from "styled-components";
 const HeaderWrapper = styled.header`
   padding: 28px;
   text-align: center;
-  background: linear-gradient(135deg, #141414, #1f1f1f);
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
+  background: rgba(20, 20, 20, 0.6); /* glassmorphism */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 15px rgba(255, 152, 0, 0.3);
 `;
 
 const Title = styled.h1`
@@ -12,7 +14,13 @@ const Title = styled.h1`
   color: #ff9800;
   font-weight: 700;
   letter-spacing: 1.5px;
-  text-shadow: 0 0 12px rgba(255, 152, 0, 0.6); /* glowing text */
+  text-shadow: 0 0 12px rgba(255, 152, 0, 0.6);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(255, 152, 0, 0.8);
+  }
 `;
 
 const Subtitle = styled.p`

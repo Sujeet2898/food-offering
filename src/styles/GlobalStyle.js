@@ -8,7 +8,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #0d0d0d;
+    background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #0d0d0d, #1a1a1a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: #eaeaea;
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
@@ -26,6 +28,12 @@ const GlobalStyle = createGlobalStyle`
 
   a:hover {
     color: #ffc107;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 `;
 
